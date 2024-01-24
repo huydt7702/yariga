@@ -11,6 +11,8 @@ const config: Config = {
       colors: {
         grayf4: '#f4f4f4',
         grayfc: '#fcfcfc',
+        primary: '#11142d',
+        gray80: '#808191',
       },
     },
   },
