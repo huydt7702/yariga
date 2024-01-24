@@ -1,3 +1,5 @@
+import { LayoutMain } from '@/components/layout';
+
 export default function Home() {
-  return <main>Hello anh em</main>;
+  return <LayoutMain>Homepage</LayoutMain>;
 }
