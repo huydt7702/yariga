@@ -11,8 +11,12 @@ const config: Config = {
       colors: {
         grayf4: '#f4f4f4',
         grayfc: '#fcfcfc',
-        primary: '#11142d',
+        primaryText: '#11142d',
+        primary: '#475be8',
         gray80: '#808191',
+      },
+      spacing: {
+        c10: '10px',
       },
     },
   },
