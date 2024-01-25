@@ -1,35 +1,88 @@
-import { IconBuilding, IconDashboard, IconMessage, IconPerson, IconProfile, IconStar } from '@/components/icons';
-import { TSidebarLink } from '@/types/general.types';
+import {
+  IconBuilding,
+  IconDashboard,
+  IconMessage,
+  IconPerson,
+  IconProfile,
+  IconStar,
+} from "@/components/icons";
+import {
+  TDropdownData,
+  TPropertyStatusData,
+  TPropertyTypeData,
+  TSidebarLink,
+} from "@/types/general.types";
 
-export const sidebarLink: TSidebarLink[] = [
+export const sidebarLinks: TSidebarLink[] = [
   {
-    title: 'Dashboard',
+    title: "Dashboard",
     icon: <IconDashboard />,
-    path: '/',
+    path: "/",
   },
   {
-    title: 'Property',
+    title: "Property",
     icon: <IconBuilding />,
-    path: '/property',
+    path: "/properties",
   },
   {
-    title: 'Agent',
+    title: "Agent",
     icon: <IconPerson />,
-    path: '/agent',
+    path: "/agent",
   },
   {
-    title: 'Review',
+    title: "Review",
     icon: <IconStar />,
-    path: '/review',
+    path: "/review",
   },
   {
-    title: 'Message',
+    title: "Message",
     icon: <IconMessage />,
-    path: '/message',
+    path: "/message",
   },
   {
-    title: 'My Profile',
+    title: "My Profile",
     icon: <IconProfile />,
-    path: '/profile',
+    path: "/my-profile",
   },
 ];
+export const propertyStatusData: TPropertyStatusData[] = [
+  {
+    value: "",
+    label: "Any Status",
+  },
+  {
+    value: "sale",
+    label: "For Sale",
+  },
+  {
+    value: "rent",
+    label: "For Rent",
+  },
+];
+export const propertyTypeData: TPropertyTypeData[] = [
+  {
+    value: "",
+    label: "Any Type",
+  },
+  {
+    value: "apartments",
+    label: "Appartments",
+  },
+  {
+    value: "houses",
+    label: "House",
+  },
+  {
+    value: "commercial",
+    label: "Commercial",
+  },
+  {
+    value: "garages",
+    label: "Garages",
+  },
+  {
+    value: "lots",
+    label: "Lots",
+  },
+];
+export const ITEMS_PER_PAGE = 2;

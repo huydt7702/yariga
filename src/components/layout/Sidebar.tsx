@@ -1,32 +1,34 @@
-import { sidebarLink } from '@/constants/general.const';
-import { TSidebarLink } from '@/types/general.types';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
+import Link from "next/link";
+import React from "react";
+import { sidebarLinks } from "@/constants/general.const";
+import { useRouter } from "next/router";
+import { TSidebarLink } from "@/types/general.types";
 
 const Sidebar = () => {
-  const { pathname } = useRouter();
-
+  const router = useRouter();
+  const { pathname } = router;
   return (
-    <div className="bg-grayfc py-6 px-4">
-      {sidebarLink.map((link) => (
-        <SidebarLink key={link.title} link={link} isActive={pathname === link.path} />
+    <div className="px-4 py-6 bg-grayfc">
+      {sidebarLinks.map((link) => (
+        <SidebarLink
+          isActive={pathname === link.path}
+          key={link.title}
+          link={link}
+        ></SidebarLink>
       ))}
     </div>
   );
 };
-
 interface ISidebarLinkProps {
   link: TSidebarLink;
   isActive: boolean;
 }
-
 function SidebarLink({ link, isActive }: ISidebarLinkProps) {
   return (
     <Link
-      key={link.title}
       href={link.path}
-      className={`px-6 py-4 flex items-center gap-c10 font-bold text-base text-gray80 rounded-xl ${
-        isActive ? 'bg-primary text-grayfc' : 'hover:text-primary'
+      className={`flex items-center px-6 py-4 text-base font-bold gap-c10 text-gray80 rounded-xl ${
+        isActive ? "bg-primary text-grayfc" : "hover:text-primary"
       }`}
     >
       <span>{link.icon}</span>
